@@ -1,185 +1,129 @@
 <!DOCTYPE html>
-<html lang="bn"><head><meta charset="utf-8"><title>FreshBazar Bangladesh</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="FreshBazar – তাজা সবজি, এখন আপনার দরজায়। Fresh vegetables delivered across Bangladesh.">
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123d2d">
+<title>FRESH BAZAR | ভৈরবের অনলাইন বাজার</title>
 <style>
-:root{--bg:#f6faf4;--sf:#fff;--tx:#17301c;--mu:#5d7262;--pr:#0aa30a;--pr2:#e6f7e6;--dk:#0f4a2a;--ac:#f59e0b;--bd:#dce8d9;--rd:#d93025;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1a12;--sf:#16241a;--tx:#e8f3ea;--mu:#9bb3a0;--pr:#4cc16b;--pr2:#1c3323;--bd:#26402d}}
-*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 "Noto Sans Bengali",system-ui,sans-serif}
-button,input,select,textarea{font:inherit;color:inherit}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--sf);border-bottom:1px solid var(--bd);display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 12px}
-.logo{font-weight:800;font-size:20px;color:var(--pr);cursor:pointer}.logo small{display:block;font-size:10px;color:var(--mu);font-weight:400}
-.srch{flex:1 1 160px;min-width:140px}
-input,select,textarea{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:9px 10px;width:100%}
-.btn{background:var(--pr);color:#fff;border:0;border-radius:10px;padding:9px 14px;cursor:pointer;font-weight:600}
-.btn.o{background:var(--pr2);color:var(--pr)}.btn.d{background:var(--rd)}.btn.s{padding:5px 9px;font-size:13px}
-.ib{background:var(--pr2);border:0;border-radius:10px;padding:8px 10px;cursor:pointer;position:relative}
-.bd{position:absolute;top:-5px;right:-5px;background:var(--ac);color:#000;border-radius:9px;font-size:11px;padding:0 5px}
-main{max-width:1100px;margin:auto;padding:12px}
-.hero{background:linear-gradient(135deg,#1f8a3b,#0e5a24);color:#fff;border-radius:18px;padding:28px 20px;margin-bottom:14px}
-.hero h1{margin:0 0 6px;font-size:26px}.hero p{margin:0 0 14px;opacity:.9}.hero .btn{background:var(--ac);color:#000}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px}
-.chip{white-space:nowrap;background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:6px 12px;cursor:pointer}.chip.on{background:var(--pr);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
-.card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:10px;position:relative;display:flex;flex-direction:column;gap:4px}
-.em{font-size:48px;text-align:center;background:var(--pr2);border-radius:10px}
-.tag{position:absolute;top:8px;left:8px;background:var(--rd);color:#fff;border-radius:6px;font-size:11px;padding:1px 6px}
-.wl{position:absolute;top:6px;right:8px;background:none;border:0;font-size:18px;cursor:pointer}
-.pr b{color:var(--pr);font-size:16px}.pr s{color:var(--mu);font-size:12px}
-.row{display:flex;gap:6px;align-items:center}.row>*{flex:0 0 auto}.row input{width:56px;text-align:center}
-h2{margin:18px 0 8px;font-size:18px}.mu{color:var(--mu);font-size:13px}
-.panel{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-bottom:12px}
-.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
-.ov{position:fixed;inset:0;background:#0008;z-index:9;display:none}.ov.on{display:block}
-.dr{position:absolute;right:0;top:0;bottom:0;width:min(400px,100%);background:var(--sf);padding:14px;overflow:auto}
-.ci{display:flex;justify-content:space-between;gap:6px;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd)}
-table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:6px 4px;border-bottom:1px solid var(--bd);text-align:left}
-.sc{overflow-x:auto}.tl{display:flex;gap:4px;margin:8px 0}.tl i{flex:1;height:6px;border-radius:3px;background:var(--bd)}.tl i.on{background:var(--pr)}
-#toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:9px 16px;border-radius:20px;z-index:20;display:none}
-footer{text-align:center;color:var(--mu);padding:24px 12px;font-size:13px}
-.rv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
-.strip{background:var(--dk);color:#d9f2dd;text-align:center;font-size:12px;padding:6px}body{font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif}
-.hero2{display:grid;grid-template-columns:1.1fr .9fr;gap:10px;align-items:center;background:linear-gradient(135deg,#e6f7e6,#f3fbe8);color:#0f4a2a;border-radius:22px;padding:26px 22px;margin-bottom:14px}.hero2 h1{font-size:clamp(26px,5vw,42px);line-height:1.15;margin:8px 0}.hero2 h1 em{color:#0aa30a;font-style:normal}.hero2 p{margin:0 0 14px}.pill{background:#fff;border-radius:20px;padding:3px 10px;font-size:12px;display:inline-block}.art{font-size:clamp(60px,14vw,110px);text-align:center;position:relative}.off{position:absolute;top:0;right:6%;background:#ff7a1a;color:#fff;font-size:15px;border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-weight:700}
-@media(max-width:700px){.hero2{grid-template-columns:1fr}}
-.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:6px}.feat div{border-radius:14px;padding:12px;font-size:13px;color:#17301c}.feat b{display:block}
-.ct{display:grid;grid-template-columns:repeat(auto-fill,minmax(98px,1fr));gap:10px}.ct div{border-radius:50px 50px 12px 12px;text-align:center;padding:14px 6px;cursor:pointer;font-size:13px;border:2px solid transparent;color:#17301c}.ct div.on{border-color:#0aa30a}.ct span{display:block;font-size:34px}
-.lay{display:grid;grid-template-columns:190px 1fr;gap:14px;align-items:start}@media(max-width:700px){.lay{grid-template-columns:1fr}}
-.side{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:10px 12px}.side summary{font-weight:700;cursor:pointer}.fl{display:flex;gap:6px;align-items:center;padding:3px 0;font-size:14px}.fl input{width:auto}
-.pb2{display:flex;justify-content:space-between;align-items:center;gap:4px;margin-top:auto}.plus{width:34px;height:34px;border-radius:50%;border:0;background:var(--pr);color:#fff;font-size:22px;line-height:1;cursor:pointer}.qi{width:44px!important;padding:5px 2px!important}
-.card{transition:.2s}.card:hover{box-shadow:0 6px 18px #0002;transform:translateY(-2px)}.em{aspect-ratio:1.1;display:flex;align-items:center;justify-content:center;font-size:56px}.tag{border-radius:4px}
-.promo{background:var(--dk);color:#fff;border-radius:18px;padding:22px;margin:18px 0;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}.promo b{font-size:20px}.promo .btn{background:var(--ac);color:#000}
-footer{background:var(--dk);color:#cfe8d5;text-align:left;padding:24px 16px;margin-top:20px}footer .fg{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}footer b{color:#fff}
-.bn{display:none}@media(max-width:700px){.bn{display:flex;position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px solid var(--bd);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));justify-content:space-around;z-index:6}.bn button{background:none;border:0;font-size:12px;cursor:pointer}body{padding-bottom:64px}}
-</style><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet"></head><body>
-<div class="strip" id="st0"></div><header>
-<div class="logo" onclick="go('shop')">🥬 FreshBazar<small id="tg"></small></div>
-<input class="srch" id="q" oninput="Q=this.value;go('shop')">
-<button class="ib" onclick="toggleLang()" id="lb">EN</button>
-<button class="ib" onclick="go('wish')">♥<span class="bd" id="wc"></span></button>
-<button class="ib" onclick="go('orders')">📦</button>
-<button class="ib" onclick="go('admin')">⚙️</button>
-<button class="ib" onclick="openCart()">🛒<span class="bd" id="cc"></span></button>
-</header>
-<main id="m"></main>
-<div class="ov" id="ov" onclick="if(event.target===this)closeCart()"><div class="dr" id="dr"></div></div>
-<div id="toast"></div><nav class="bn"><button onclick="go('shop')">🏠<br>Home</button><button onclick="go('wish')">♥<br>Wishlist</button><button onclick="openCart()">🛒<br>Cart</button><button onclick="go('orders')">📦<br>Orders</button></nav>
-<footer id="ft"></footer>
+:root{--green:#123d2d;--green2:#1f6848;--lime:#dff2d6;--cream:#f7f8f1;--ink:#1d2a22;--muted:#68766d;--line:#e4e9e1;--white:#fff;--orange:#f2a93b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}.topline{background:#0c2d21;color:#e9f5eb;text-align:center;padding:8px 12px;font-size:12px}.header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}.nav{max-width:1180px;margin:auto;padding:14px 20px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--green);font-weight:900;font-size:21px;white-space:nowrap;letter-spacing:-.5px}.brand-mark{height:40px;width:40px;border-radius:13px;background:var(--green);display:grid;place-items:center;color:#dff2d6;font-size:22px}.search{flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);border-radius:13px;padding:12px 15px 12px 42px;background:#f8faf6;outline:none}.search span{position:absolute;left:14px;top:10px;font-size:18px;color:var(--muted)}.cartbtn{border:0;background:var(--green);color:white;border-radius:13px;padding:12px 16px;font-weight:750}.cartcount{background:#dff2d6;color:var(--green);padding:2px 7px;border-radius:20px;margin-left:6px}.hero{max-width:1180px;margin:26px auto 20px;padding:0 20px}.hero-inner{background:linear-gradient(110deg,#123d2d 0%,#1b6545 62%,#367b4c 100%);border-radius:28px;min-height:330px;display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;color:white;position:relative}.hero-copy{padding:48px 42px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:7px;background:#ffffff1c;border:1px solid #ffffff30;border-radius:30px;padding:7px 12px;font-size:12px;color:#e8f5e8}.hero h1{font-size:clamp(34px,5vw,55px);line-height:1.15;margin:18px 0 12px;letter-spacing:-1.5px}.hero p{color:#d8eadc;line-height:1.8;max-width:440px;margin:0 0 23px}.primary{border:0;border-radius:12px;background:#e5f4d8;color:#173e2c;padding:13px 19px;font-weight:850}.hero-art{display:flex;align-items:center;justify-content:center;padding:18px;min-height:280px}.hero-art img{width:100%;height:290px;object-fit:cover;border-radius:22px;box-shadow:0 20px 50px #001c1240}.features{max-width:1140px;margin:18px auto 30px;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;display:flex;gap:12px;align-items:center}.feature b{display:block;font-size:14px}.feature small{color:var(--muted);font-size:12px}.feature-icon{font-size:23px;background:#edf6e9;border-radius:12px;padding:10px}.section{max-width:1180px;margin:0 auto;padding:15px 20px 38px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}.section h2{font-size:26px;margin:0 0 4px;color:var(--green)}.section-head p{margin:0;color:var(--muted);font-size:13px}.categories{display:flex;gap:9px;overflow:auto;padding:3px 0 15px}.cat{white-space:nowrap;border:1px solid var(--line);background:#fff;color:#405247;padding:10px 16px;border-radius:30px;font-weight:700}.cat.active{background:var(--green);color:#fff;border-color:var(--green)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product{background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}.product:hover{transform:translateY(-3px);box-shadow:0 12px 28px #123d2d12}.product img{width:100%;height:205px;object-fit:cover;background:#edf3e9}.product-info{padding:14px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;color:#36724c;background:#edf6e9;padding:4px 8px;border-radius:20px;align-self:flex-start}.product h3{font-size:16px;margin:9px 0 3px}.unit{font-size:12px;color:var(--muted)}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px}.price{font-weight:900;color:var(--green);font-size:18px}.add{border:0;background:var(--green);color:#fff;border-radius:10px;padding:9px 13px;font-weight:750}.empty{padding:35px;text-align:center;color:var(--muted);grid-column:1/-1}.footer{background:#0d3023;color:#d9e9dc;padding:35px 20px;margin-top:15px}.footer-inner{max-width:1140px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer strong{font-size:20px;color:white}.footer p{font-size:13px;color:#b9d0bf;line-height:1.8}.footer small{color:#9fbaa7}.overlay{display:none;position:fixed;inset:0;background:#061b12a8;z-index:50;align-items:center;justify-content:center;padding:15px}.overlay.show{display:flex}.modal{background:#fff;border-radius:22px;width:min(560px,100%);max-height:90vh;overflow:auto;padding:22px}.modal-head{display:flex;justify-content:space-between;align-items:center}.modal h2{margin:0;color:var(--green)}.close{border:0;background:#edf2eb;border-radius:10px;width:36px;height:36px;font-size:20px}.cart-lines{margin:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.cartline{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #eef1ec}.cartline:last-child{border:0}.cartline small{display:block;color:var(--muted)}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:#f6f8f3;border-radius:8px;width:28px;height:28px}.total{display:flex;justify-content:space-between;font-weight:900;font-size:18px;margin:14px 0 18px}.formgrid{display:grid;gap:11px}.formgrid label{font-size:13px;font-weight:750}.formgrid input,.formgrid textarea{display:block;width:100%;border:1px solid #dce4da;border-radius:11px;padding:12px;margin-top:5px;outline-color:#6d9b76}.formgrid textarea{min-height:75px;resize:vertical}.submit{width:100%;background:#16834a;color:#fff;border:0;border-radius:12px;padding:14px;font-weight:850;margin-top:14px}.notice{font-size:11px;color:var(--muted);line-height:1.6;margin-top:10px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#183d2c;color:#fff;padding:12px 18px;border-radius:30px;z-index:80;display:none;font-size:13px;box-shadow:0 8px 30px #0002}.toast.show{display:block}
+@media(max-width:800px){.nav{gap:10px;padding:11px 14px}.brand{font-size:17px}.brand-mark{width:35px;height:35px}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:32px 25px 10px}.hero-art{padding:12px 20px 22px;min-height:0}.hero-art img{height:190px}.features{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.product img{height:155px}.product-info{padding:11px}.product h3{font-size:14px}.price{font-size:16px}.add{padding:8px 10px;font-size:12px}.section{padding-left:14px;padding-right:14px}.hero{padding:0 14px}.hero h1{font-size:36px}.search input{padding:10px 8px 10px 32px;font-size:12px}.search span{left:10px;top:8px}.cartbtn{padding:10px;font-size:12px}.topline{font-size:11px}}
+@media(max-width:370px){.brand{font-size:14px}.brand-mark{width:31px;height:31px}.nav{gap:7px}.product img{height:130px}}
+</style>
+</head>
+<body>
+<div class="topline">🥬 ভৈরব উপজেলায় ডেলিভারি • প্রতিদিনের তাজা বাজার এখন অনলাইনে</div>
+<header class="header"><nav class="nav">
+<a class="brand" href="#"><span class="brand-mark">🌿</span><span>FRESH BAZAR</span></a>
+<div class="search"><span>⌕</span><input id="search" type="search" placeholder="পণ্য খুঁজুন..."></div>
+<button class="cartbtn" onclick="openCart()">🛒 কার্ট <span class="cartcount" id="cartCount">0</span></button>
+</nav></header>
+<main>
+<section class="hero"><div class="hero-inner">
+<div class="hero-copy"><span class="eyebrow">✦ FRESH • NATURAL • TRUSTED</span><h1>তাজা বাজার,<br>সেরা দামে!</h1><p>ভৈরবের প্রতিদিনের বাজার এখন ঘরে বসেই অর্ডার করুন। পছন্দের পণ্য বেছে নিন, অর্ডার পাঠিয়ে দিন সহজেই।</p><button class="primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">বাজার শুরু করুন →</button></div>
+<div class="hero-art"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1100&q=85" alt="তাজা সবজির বাজার"></div>
+</div></section>
+<section class="features">
+<div class="feature"><span class="feature-icon">🥬</span><div><b>তাজা পণ্য</b><small>প্রতিদিনের বাজারের আয়োজন</small></div></div>
+<div class="feature"><span class="feature-icon">🛵</span><div><b>ভৈরবে ডেলিভারি</b><small>শুধু ভৈরব উপজেলা</small></div></div>
+<div class="feature"><span class="feature-icon">💬</span><div><b>সহজ অর্ডার</b><small>WhatsApp-এ অর্ডার নিশ্চিত করুন</small></div></div>
+</section>
+<section class="section" id="products">
+<div class="section-head"><div><h2>আজকের বাজার</h2><p>আপনার পছন্দের তাজা পণ্য বেছে নিন</p></div></div>
+<div class="categories" id="categories"></div>
+<div class="grid" id="productGrid"></div>
+</section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><strong>🌿 FRESH BAZAR</strong><p>ভৈরবের অনলাইন বাজার<br>তাজা পণ্য • সঠিক দাম • সহজ অর্ডার</p></div><div><b>ডেলিভারি এলাকা</b><p>ভৈরব উপজেলা, কিশোরগঞ্জ</p><b>WhatsApp Order</b><p>+880 1623-565325</p></div><div><small>© 2026 FRESH BAZAR. All rights reserved.</small></div></div></footer>
+
+<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()"><div class="modal">
+<div class="modal-head"><h2>আপনার বাজারের ব্যাগ</h2><button class="close" onclick="closeCart()">×</button></div>
+<div id="cartContents"></div>
+<div class="total"><span>সর্বমোট</span><span id="cartTotal">৳০</span></div>
+<div class="formgrid">
+<label>আপনার নাম<input id="customerName" placeholder="সম্পূর্ণ নাম"></label>
+<label>মোবাইল নম্বর<input id="customerPhone" type="tel" placeholder="01XXXXXXXXX"></label>
+<label>ডেলিভারি ঠিকানা<textarea id="customerAddress" placeholder="গ্রাম/মহল্লা, রোড, বাসা নম্বর"></textarea></label>
+</div>
+<button class="submit" onclick="placeOrder()">WhatsApp-এ অর্ডার পাঠান</button>
+<div class="notice">অর্ডার পাঠানোর আগে আপনার নাম, ফোন ও ঠিকানা যাচাই করুন। পণ্যের প্রদর্শিত দাম নমুনা—দোকানদারকে বর্তমান দাম নিশ্চিত করতে হবে।</div>
+</div></div>
+<div class="toast" id="toast"></div>
 <script>
-const $=s=>document.querySelector(s);
-const ld=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}};
-const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const T={
-tag:['সতেজ বাজার, সেরা দামে।','Fresh market, best prices.'],sp:['সবজি খুঁজুন…','Search vegetables…'],
-h1:['তাজা সবজি, এখন আপনার দরজায়','Fresh vegetables, now at your door'],hp:['সরাসরি কৃষক থেকে, একই দিনে ডেলিভারি।','Straight from farmers, same-day delivery.'],
-shop:['এখনই কিনুন','Shop Now'],all:['সব','All'],add:['কার্টে যোগ','Add to Cart'],out:['স্টক শেষ','Out of stock'],stock:['স্টক','Stock'],
-cart:['কার্ট','Cart'],empty:['কার্ট খালি','Cart is empty'],sub:['সাবটোটাল','Subtotal'],del:['ডেলিভারি','Delivery'],disc:['কুপন ছাড়','Coupon discount'],tot:['মোট প্রদেয়','Total payable'],
-cp:['কুপন কোড','Coupon code'],ap:['প্রয়োগ','Apply'],co:['চেকআউটে যান','Checkout'],inc:['ঢাকা/শহরের ভিতরে','Inside city'],outc:['শহরের বাইরে','Outside city'],
-nm:['পূর্ণ নাম','Full name'],mb:['মোবাইল (+880)','Mobile (+880)'],dv:['বিভাগ','Division'],ds:['জেলা','District'],up:['উপজেলা','Upazila'],ar:['এলাকা','Area'],rd:['রোড','Road'],hs:['বাড়ি','House'],nt:['অর্ডার নোট','Order notes'],
-pay:['পেমেন্ট পদ্ধতি','Payment method'],cod:['ক্যাশ অন ডেলিভারি','Cash on Delivery'],place:['অর্ডার করুন','Place order'],
-mfs:['⚠️ এই মোবাইল পেমেন্ট গেটওয়ে এখনো সংযুক্ত নয়। অর্ডারটি "পেমেন্ট অপেক্ষমাণ" থাকবে এবং আমাদের টিম যাচাই করে নিশ্চিত করবে।','⚠️ This mobile-payment gateway is not connected yet. Your order stays "Payment pending" until our team verifies it manually.'],
-ord:['আমার অর্ডার','My orders'],trk:['অর্ডার আইডি বা মোবাইল দিয়ে ট্র্যাক করুন','Track by order ID or mobile'],wish:['পছন্দের তালিকা','Wishlist'],
-rev:['গ্রাহকের মতামত','Customer reviews'],dinf:['ডেলিভারি তথ্য','Delivery information'],pop:['জনপ্রিয় ও আজকের তাজা','Popular & fresh today'],
-st:{Pending:['অপেক্ষমাণ','Pending'],Confirmed:['নিশ্চিত','Confirmed'],Preparing:['প্রস্তুত হচ্ছে','Preparing'],'Out for Delivery':['ডেলিভারিতে','Out for Delivery'],Delivered:['পৌঁছেছে','Delivered'],Cancelled:['বাতিল','Cancelled']},
-sort:['সাজান','Sort'],lo:['দাম: কম','Price: low'],hi:['দাম: বেশি','Price: high'],ds2:['ছাড়','Discount'],
-};
-let lang=ld('fb_lang',0),Q='',CAT=-1,SORT='',view='shop';
-const t=k=>T[k][lang];
-const n=x=>Number(x).toLocaleString(lang?'en-US':'bn-BD');
-const tk=x=>'৳'+n(Math.round(x));
-const CATS=[['শাকসবজি','Leafy greens','🥬'],['আলু ও পেঁয়াজ','Potato & onion','🥔'],['টমেটো','Tomato','🍅'],['কাঁচামরিচ','Green chili','🌶️'],['বেগুন','Brinjal','🍆'],['ফুলকপি ও বাঁধাকপি','Cauliflower & cabbage','🥦'],['শসা ও লাউ','Cucumber & gourd','🥒'],['দেশি ফল','Local fruits','🥭'],['অর্গানিক সবজি','Organic','🌱'],['মসলা','Spices','🧄']];
-const DIV={Dhaka:['ঢাকা',['Dhaka|ঢাকা','Gazipur|গাজীপুর','Narayanganj|নারায়ণগঞ্জ']],Chattogram:['চট্টগ্রাম',['Chattogram|চট্টগ্রাম','Cox\u2019s Bazar|কক্সবাজার','Cumilla|কুমিল্লা']],Rajshahi:['রাজশাহী',['Rajshahi|রাজশাহী','Bogura|বগুড়া']],Khulna:['খুলনা',['Khulna|খুলনা','Jashore|যশোর']],Sylhet:['সিলেট',['Sylhet|সিলেট','Moulvibazar|মৌলভীবাজার']],Barishal:['বরিশাল',['Barishal|বরিশাল','Bhola|ভোলা']],Rangpur:['রংপুর',['Rangpur|রংপুর','Dinajpur|দিনাজপুর']],Mymensingh:['ময়মনসিংহ',['Mymensingh|ময়মনসিংহ','Jamalpur|জামালপুর']]};
-const P0=[['আলু','Potato',1,40,'kg',10,120,'দেশি আলু, রান্নার জন্য সেরা।'],['পেঁয়াজ','Onion',1,80,'kg',0,80,'ঝাঁঝালো দেশি পেঁয়াজ।'],['টমেটো','Tomato',2,60,'kg',15,50,'লাল পাকা টমেটো।'],['কাঁচামরিচ','Green chili',3,200,'kg',0,30,'ঝাল কাঁচামরিচ।'],['বেগুন','Brinjal',4,70,'kg',5,40,'কচি লম্বা বেগুন।'],['ফুলকপি','Cauliflower',5,50,'piece',0,35,'সতেজ ফুলকপি।'],['বাঁধাকপি','Cabbage',5,40,'piece',10,45,'শক্ত বাঁধাকপি।'],['শসা','Cucumber',6,50,'kg',0,60,'কচি শসা।'],['লাউ','Bottle gourd',6,45,'piece',0,25,'কচি লাউ।'],['পালংশাক','Spinach',0,30,'kg',0,20,'সবুজ পালংশাক।'],['আম','Mango',7,120,'kg',20,0,'মৌসুমি আম।'],['অর্গানিক গাজর','Organic carrot',8,110,'kg',0,18,'কীটনাশকমুক্ত গাজর।'],['রসুন','Garlic',9,220,'kg',5,40,'দেশি রসুন।'],['আদা','Ginger',9,260,'kg',0,30,'তাজা আদা।'],['হলুদ গুঁড়া','Turmeric powder',9,40,'gram',0,60,'১০০ গ্রাম প্যাকেট।'],['লাল শাক','Red amaranth',0,25,'kg',0,22,'কচি লাল শাক।']].map((p,i)=>({id:i+1,bn:p[0],en:p[1],cat:p[2],price:p[3],unit:p[4],disc:p[5],stock:p[6],desc:p[7],em:CATS[p[2]][2]}));
-let prods=ld('fb_p',P0),cart=ld('fb_c',{}),wish=ld('fb_w',[]),orders=ld('fb_o',[]),coupons=ld('fb_cp',{FRESH10:10,BAZAR50:50}),fees=ld('fb_f',{in:60,out:120}),cpn='',admin=false,editing=null;
-const pp=p=>p.price*(1-p.disc/100);
-const unitL=u=>({kg:['কেজি','KG'],gram:['গ্রাম','Gram'],piece:['পিস','Piece']}[u][lang]);
-function toast(m){const e=$('#toast');e.textContent=m;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',2200)}
-function toggleLang(){lang=lang?0:1;sv('fb_lang',lang);go(view)}
-function go(v){view=v;chrome();({shop,wish:wishV,orders:ordersV,admin:adminV})[v]();window.scrollTo(0,0)}
-function chrome(){document.documentElement.lang=lang?'en':'bn';$('#tg').textContent=t('tag');$('#st0').textContent=lang?'🚚 Fast delivery across Bangladesh · Use coupon FRESH10 for 10% off':'🚚 সারা বাংলাদেশে দ্রুত ডেলিভারি · FRESH10 কুপনে ১০% ছাড়';$('#q').placeholder=t('sp');$('#lb').textContent=lang?'বাং':'EN';
-$('#cc').textContent=Object.keys(cart).length||'';$('#wc').textContent=wish.length||'';
-$('#ft').innerHTML=`<div class="fg"><div><b>🥬 FreshBazar</b><br>${t('tag')}</div><div><b>${lang?'Contact':'যোগাযোগ'}</b><br>📞 +880 1612577693<br>support@freshbazar.example</div><div><b>${lang?'Payments':'পেমেন্ট'}</b><br>${t('cod')} · bKash · Nagad · Rocket</div></div><div style="text-align:center;margin-top:14px;font-size:12px">© FreshBazar Bangladesh</div>`;document.title='FreshBazar Bangladesh'}
-function cardOld(p){const w=wish.includes(p.id);return `<div class="card">${p.disc?`<span class="tag">-${n(p.disc)}%</span>`:''}<button class="wl" onclick="tw(${p.id})" aria-label="wishlist">${w?'❤️':'🤍'}</button><div class="em">${p.em}</div><b>${esc(lang?p.en:p.bn)}</b><span class="mu">${esc(lang?p.bn:p.en)} · ${t('stock')}: ${n(p.stock)}</span><span class="mu">${esc(p.desc)}</span><div class="pr"><b>${tk(pp(p))}</b>/${unitL(p.unit)} ${p.disc?`<s>${tk(p.price)}</s>`:''}</div>${p.stock>0?`<div class="row"><input type="number" min="1" max="${p.stock}" value="1" id="q${p.id}"><button class="btn s" onclick="addC(${p.id})">${t('add')}</button></div>`:`<span class="mu">${t('out')}</span>`}</div>`}
-function shopOld(){let l=prods.filter(p=>(CAT<0||p.cat==CAT)&&(!Q||(p.bn+p.en).toLowerCase().includes(Q.toLowerCase())));
-if(SORT=='lo')l.sort((a,b)=>pp(a)-pp(b));if(SORT=='hi')l.sort((a,b)=>pp(b)-pp(a));if(SORT=='d')l.sort((a,b)=>b.disc-a.disc);
-const rv=[['রহিমা বেগম, ঢাকা','Rahima Begum, Dhaka','সবজি সত্যিই তাজা ছিল, সময়মতো এসেছে।','Truly fresh, arrived on time.'],['তানভীর, চট্টগ্রাম','Tanvir, Chattogram','দাম ভালো, প্যাকেজিং চমৎকার।','Great prices, lovely packaging.'],['সুমি আক্তার, সিলেট','Sumi Akter, Sylhet','অর্গানিক সবজির মান দারুণ।','Organic quality is excellent.']];
-$('#m').innerHTML=`<div class="hero"><h1>${t('h1')}</h1><p>${t('hp')}</p><button class="btn" onclick="document.getElementById('pl').scrollIntoView({behavior:'smooth'})">${t('shop')}</button></div>
-<div class="chips"><span class="chip ${CAT<0?'on':''}" onclick="CAT=-1;shop()">${t('all')}</span>${CATS.map((c,i)=>`<span class="chip ${CAT==i?'on':''}" onclick="CAT=${i};shop()">${c[2]} ${lang?c[1]:c[0]}</span>`).join('')}</div>
-<div class="row" id="pl" style="margin-bottom:8px"><span class="mu">${t('sort')}:</span><select style="width:auto" onchange="SORT=this.value;shop()"><option value="">—</option><option value="lo" ${SORT=='lo'?'selected':''}>${t('lo')}</option><option value="hi" ${SORT=='hi'?'selected':''}>${t('hi')}</option><option value="d" ${SORT=='d'?'selected':''}>${t('ds2')}</option></select></div>
-<div class="grid">${l.map(card).join('')||'<p class="mu">—</p>'}</div>
-<h2>${t('rev')}</h2><div class="rv">${rv.map(r=>`<div class="panel"><b>⭐⭐⭐⭐⭐</b><br>${lang?r[3]:r[2]}<div class="mu">${lang?r[1]:r[0]}</div></div>`).join('')}</div>
-<h2>${t('dinf')}</h2><div class="panel">🚚 ${t('inc')}: ${tk(fees.in)} · ${t('outc')}: ${tk(fees.out)}<br>🕐 ${lang?'Order before 12pm for same-day delivery.':'দুপুর ১২টার আগে অর্ডার করলে একই দিনে ডেলিভারি।'}</div>`}
-let FP='',FD=0;const CT=['#e3f4dc','#fde8e8','#ffe9d6','#e3f0ff','#f3e5f5','#e0f7f4','#fff3d6','#fbe9e7','#e8f5e9','#fff8e1'],PS=['#e6f4e1','#fde8e8','#fff3d6','#e3f0ff'];
-function card(p){const w=wish.includes(p.id);return `<div class="card"><button class="wl" onclick="tw(${p.id})" aria-label="wishlist">${w?'❤️':'🤍'}</button>${p.disc?`<span class="tag">-${n(p.disc)}%</span>`:''}<div class="em" style="background:${CT[p.cat]}">${p.em.startsWith('data:')?`<img src="${p.em}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:10px">`:p.em}</div><b>${esc(lang?p.en:p.bn)}</b><span class="mu">${esc(lang?p.bn:p.en)} · ${t('stock')}: ${n(p.stock)}</span><div class="pb2"><div class="pr"><b>${tk(pp(p))}</b><span class="mu">/${unitL(p.unit)}</span> ${p.disc?`<s>${tk(p.price)}</s>`:''}</div>${p.stock>0?`<span class="row"><input type="number" min="1" max="${p.stock}" value="1" id="q${p.id}" class="qi"><button class="plus" onclick="addC(${p.id})" aria-label="${t('add')}">+</button></span>`:`<span class="mu">${t('out')}</span>`}</div></div>`}
-function shop(){const b=(x,y)=>lang?y:x,rg={'':[0,1e9],a:[0,50],b:[50,100],c:[100,200],d:[200,1e9]}[FP];
-let l=prods.filter(p=>(CAT<0||p.cat==CAT)&&(!Q||(p.bn+p.en).toLowerCase().includes(Q.toLowerCase()))&&pp(p)>=rg[0]&&pp(p)<rg[1]&&(!FD||p.disc>0));
-if(SORT=='lo')l.sort((a,b)=>pp(a)-pp(b));if(SORT=='hi')l.sort((a,b)=>pp(b)-pp(a));if(SORT=='d')l.sort((a,b)=>b.disc-a.disc);
-const rd=(k,a)=>`<label class="fl"><input type="radio" name="pf" ${FP==k?'checked':''} onchange="FP='${k}';shop()"> ${a}</label>`;
-const rv=[['রহিমা বেগম, ঢাকা','Rahima Begum, Dhaka','সবজি সত্যিই তাজা ছিল, সময়মতো এসেছে।','Truly fresh, arrived on time.'],['তানভীর, চট্টগ্রাম','Tanvir, Chattogram','দাম ভালো, প্যাকেজিং চমৎকার।','Great prices, lovely packaging.'],['সুমি আক্তার, সিলেট','Sumi Akter, Sylhet','অর্গানিক সবজির মান দারুণ।','Organic quality is excellent.']];
-const fe=[['🚚',b('দ্রুত ডেলিভারি','Fast delivery'),b('একই দিনে','Same day'),0],['🌿',b('সতেজ গ্যারান্টি','Freshness'),b('বাছাই করা সবজি','Handpicked'),1],['🔒',b('নিরাপদ পেমেন্ট','Secure payment'),'COD · bKash · Nagad',2],['🎧',b('২৪/৭ সাপোর্ট','24/7 support'),b('সবসময় পাশে','Always here'),3]];
-$('#m').innerHTML=`<div class="hero2"><div><span class="pill">🌿 ${b('১০০% সতেজ ও দেশি','100% fresh & local')}</span><h1>${lang?'Fresh vegetables, <em>now at your door</em>':'তাজা সবজি, <em>এখন আপনার দরজায়</em>'}</h1><p>${t('hp')}</p><button class="btn" onclick="document.getElementById('pl').scrollIntoView({behavior:'smooth'})">${t('shop')} →</button></div><div class="art">🧺<span class="off">45%</span><div style="font-size:.45em">🥬🍅🥕🍆</div></div></div>
-<div class="feat">${fe.map(f=>`<div style="background:${PS[f[3]]}">${f[0]} <b>${f[1]}</b>${f[2]}</div>`).join('')}</div>
-<h2>${b('জনপ্রিয় ক্যাটাগরি','Popular categories')}</h2><div class="ct">${CATS.map((c,i)=>`<div class="${CAT==i?'on':''}" style="background:${CT[i]}" onclick="CAT=CAT==${i}?-1:${i};shop();document.getElementById('pl').scrollIntoView({behavior:'smooth'})"><span>${c[2]}</span>${lang?c[1]:c[0]}</div>`).join('')}</div>
-<h2 id="pl">${t('pop')}</h2><div class="lay"><details class="side" ${innerWidth>700?'open':''}><summary>☰ ${b('ফিল্টার','Filters')}</summary><p><b>${b('ক্যাটাগরি','Category')}</b></p><select onchange="CAT=+this.value;shop()"><option value="-1">${t('all')}</option>${CATS.map((c,i)=>`<option value="${i}" ${CAT==i?'selected':''}>${lang?c[1]:c[0]}</option>`).join('')}</select><p><b>${b('দাম','Price')}</b></p>${rd('',t('all'))}${rd('a','< ৳50')}${rd('b','৳50–100')}${rd('c','৳100–200')}${rd('d','৳200+')}<p><label class="fl"><input type="checkbox" ${FD?'checked':''} onchange="FD=this.checked?1:0;shop()"> ${b('শুধু ছাড়যুক্ত','Discounted only')}</label></p><p><b>${t('sort')}</b></p><select onchange="SORT=this.value;shop()"><option value="">—</option><option value="lo" ${SORT=='lo'?'selected':''}>${t('lo')}</option><option value="hi" ${SORT=='hi'?'selected':''}>${t('hi')}</option><option value="d" ${SORT=='d'?'selected':''}>${t('ds2')}</option></select></details>
-<div><p class="mu" style="margin:0 0 8px">${n(l.length)} ${b('টি পণ্য','products')}</p><div class="grid">${l.map(card).join('')||'<p class="mu">—</p>'}</div></div></div>
-<div class="promo"><div><b>${b('প্রথম অর্ডারে সাশ্রয় করুন','Save on your order')}</b><br>${b('কুপন কোড FRESH10 ব্যবহার করুন – ১০% ছাড়','Use coupon FRESH10 – 10% off')}</div><button class="btn" onclick="openCart()">${t('cart')} →</button></div>
-<h2>${t('rev')}</h2><div class="rv">${rv.map(r=>`<div class="panel"><b>⭐⭐⭐⭐⭐</b><br>${lang?r[3]:r[2]}<div class="mu">${lang?r[1]:r[0]}</div></div>`).join('')}</div>
-<h2>${t('dinf')}</h2><div class="panel">🚚 ${t('inc')}: ${tk(fees.in)} · ${t('outc')}: ${tk(fees.out)}<br>🕐 ${b('দুপুর ১২টার আগে অর্ডার করলে একই দিনে ডেলিভারি।','Order before 12pm for same-day delivery.')}</div>`}
-function wishV(){$('#m').innerHTML=`<h2>${t('wish')}</h2><div class="grid">${prods.filter(p=>wish.includes(p.id)).map(card).join('')||'<p class="mu">—</p>'}</div>`}
-function tw(id){wish=wish.includes(id)?wish.filter(x=>x!=id):[...wish,id];sv('fb_w',wish);chrome();go(view)}
-function addC(id){const p=prods.find(x=>x.id==id),q=Math.max(1,parseInt($('#q'+id).value)||1);const cur=(cart[id]||0)+q;if(cur>p.stock){toast(lang?'Not enough stock':'পর্যাপ্ত স্টক নেই');return}cart[id]=cur;sv('fb_c',cart);chrome();toast('✓ '+(lang?p.en:p.bn))}
-function calc(area){const items=Object.entries(cart).map(([id,q])=>[prods.find(p=>p.id==id),q]).filter(x=>x[0]);const sub=items.reduce((s,[p,q])=>s+pp(p)*q,0);const pct=coupons[cpn]||0;const d=sub*pct/100;const fee=items.length?(area=='out'?fees.out:fees.in):0;return{items,sub,d,fee,tot:sub-d+fee}}
-let AREA='in';
-function openCart(){$('#ov').classList.add('on');drawCart()}function closeCart(){$('#ov').classList.remove('on')}
-function drawCart(){const c=calc(AREA);$('#dr').innerHTML=`<div class="row" style="justify-content:space-between"><h2 style="margin:0">🛒 ${t('cart')}</h2><button class="ib" onclick="closeCart()">✕</button></div>
-${c.items.map(([p,q])=>`<div class="ci"><span>${p.em} ${esc(lang?p.en:p.bn)}<br><span class="mu">${tk(pp(p))}/${unitL(p.unit)}</span></span><span class="row"><button class="btn o s" onclick="cq(${p.id},-1)">−</button><b>${n(q)}</b><button class="btn o s" onclick="cq(${p.id},1)">+</button><button class="btn d s" onclick="cq(${p.id},-999)">🗑</button></span></div>`).join('')||`<p class="mu">${t('empty')}</p>`}
-${c.items.length?`<div class="row" style="margin:10px 0"><input style="width:auto;flex:1" id="cpi" placeholder="${t('cp')}" value="${esc(cpn)}"><button class="btn o" onclick="cpn=$('#cpi').value.trim().toUpperCase();if(cpn&&!coupons[cpn]){toast(lang?'Invalid coupon':'কুপন সঠিক নয়');cpn=''}drawCart()">${t('ap')}</button></div>
-<select onchange="AREA=this.value;drawCart()"><option value="in" ${AREA=='in'?'selected':''}>${t('inc')} – ${tk(fees.in)}</option><option value="out" ${AREA=='out'?'selected':''}>${t('outc')} – ${tk(fees.out)}</option></select>
-<p>${t('sub')}: ${tk(c.sub)}<br>${t('disc')}: −${tk(c.d)}<br>${t('del')}: ${tk(c.fee)}<br><b style="font-size:18px">${t('tot')}: ${tk(c.tot)}</b></p><button class="btn" style="width:100%" onclick="checkout()">${t('co')}</button>`:''}`}
-function cq(id,d){cart[id]=(cart[id]||0)+d;const p=prods.find(x=>x.id==id);if(cart[id]<=0)delete cart[id];else if(cart[id]>p.stock){cart[id]=p.stock;toast(lang?'Stock limit':'স্টক সীমা')}sv('fb_c',cart);chrome();drawCart()}
-function checkout(){closeCart();view='co';const c=calc(AREA);
-$('#m').innerHTML=`<h2>${t('co')}</h2><div class="panel"><div class="f"><input id="cn" placeholder="${t('nm')}"><input id="cm" inputmode="tel" placeholder="${t('mb')} 01XXXXXXXXX">
-<select id="cd" onchange="dd()"><option value="">${t('dv')}</option>${Object.entries(DIV).map(([k,v])=>`<option value="${k}">${lang?k:v[0]}</option>`).join('')}</select><select id="cz"><option value="">${t('ds')}</option></select>
-<input id="cu" placeholder="${t('up')}"><input id="ca" placeholder="${t('ar')}"><input id="cr" placeholder="${t('rd')}"><input id="ch" placeholder="${t('hs')}"></div>
-<textarea id="cnt" rows="2" style="margin-top:8px" placeholder="${t('nt')}"></textarea></div>
-<div class="panel"><b>${t('pay')}</b><div class="f" style="margin-top:6px">${[['cod',t('cod')],['bkash','bKash'],['nagad','Nagad'],['rocket','Rocket']].map((x,i)=>`<label><input type="radio" name="pm" value="${x[0]}" ${i?'':'checked'} style="width:auto" onchange="$('#pw').style.display=this.value=='cod'?'none':'block'"> ${x[1]}</label>`).join('')}</div><p class="mu" id="pw" style="display:none">${t('mfs')}</p></div>
-<div class="panel">${t('del')}: ${tk(c.fee)} · <b>${t('tot')}: ${tk(c.tot)}</b></div><button class="btn" onclick="place()">${t('place')}</button>`}
-function dd(){const v=DIV[$('#cd').value];$('#cz').innerHTML=`<option value="">${t('ds')}</option>`+(v?v[1].map(x=>{const[a,b]=x.split('|');return `<option value="${a}">${lang?a:b}</option>`}).join(''):'')}
-function place(){const g=i=>$('#'+i).value.trim();const c=calc(AREA);
-if(!c.items.length)return toast(t('empty'));
-if(g('cn').length<2||!/^(\+?880|0)1[3-9]\d{8}$/.test(g('cm').replace(/[\s-]/g,''))||!g('cd')||!g('cz')||!g('cu')||!g('ca'))return toast(lang?'Please fill all required fields with a valid +880 mobile':'সব তথ্য ও সঠিক মোবাইল নম্বর দিন');
-for(const[p,q]of c.items)if(q>p.stock)return toast(lang?'Stock changed':'স্টক পরিবর্তিত');
-const pm=document.querySelector('input[name=pm]:checked').value;const d=new Date();
-const id='FB'+d.toISOString().slice(0,10).replace(/-/g,'')+'-'+Math.floor(1000+Math.random()*9000);
-const o={id,at:d.toISOString(),name:g('cn'),mobile:g('cm'),addr:[g('ch'),g('cr'),g('ca'),g('cu'),g('cz'),g('cd')].filter(Boolean).join(', '),note:g('cnt'),pm,payStatus:pm=='cod'?'Due on delivery':'Awaiting verification',status:'Pending',area:AREA,items:c.items.map(([p,q])=>({id:p.id,name:p.bn,q,price:pp(p)})),sub:c.sub,d:c.d,fee:c.fee,tot:c.tot,coupon:cpn};
-c.items.forEach(([p,q])=>p.stock-=q);orders.unshift(o);cart={};cpn='';sv('fb_p',prods);sv('fb_c',cart);sv('fb_o',orders);chrome();
-$('#m').innerHTML=`<div class="panel"><h2>✅ ${lang?'Order received':'অর্ডার গৃহীত হয়েছে'}</h2><p>${lang?'Order ID':'অর্ডার আইডি'}: <b>${id}</b></p><p>${tk(o.tot)} · ${pm=='cod'?t('cod'):t('mfs')}</p><button class="btn" onclick="go('orders')">${t('ord')}</button></div>`}
-const STS=['Pending','Confirmed','Preparing','Out for Delivery','Delivered'];
-function oCard(o,adm){const i=STS.indexOf(o.status);return `<div class="panel"><b>${o.id}</b> · ${new Date(o.at).toLocaleDateString(lang?'en-GB':'bn-BD')} · ${tk(o.tot)}<br><span class="mu">${esc(o.name)} · ${esc(o.mobile)} · ${esc(o.addr)}<br>${o.pm.toUpperCase()} – ${o.payStatus}</span>
-<div class="tl">${STS.map((s,j)=>`<i class="${i>=j&&o.status!='Cancelled'?'on':''}"></i>`).join('')}</div><b>${T.st[o.status][lang]}</b><div class="mu">${o.items.map(x=>esc(x.name)+'×'+n(x.q)).join(', ')}</div>
-${adm?`<div class="row" style="margin-top:6px"><select style="width:auto" onchange="os('${o.id}',this.value)">${[...STS,'Cancelled'].map(s=>`<option ${s==o.status?'selected':''} value="${s}">${T.st[s][lang]}</option>`).join('')}</select>${o.payStatus!='Paid'&&o.pm!='cod'?`<button class="btn o s" onclick="op('${o.id}')">${lang?'Mark paid (verified)':'পেমেন্ট যাচাই হয়েছে'}</button>`:''}</div>`:''}</div>`}
-function ordersV(){$('#m').innerHTML=`<h2>${t('ord')}</h2><input id="tq" placeholder="${t('trk')}" oninput="tr()"><div id="tl" style="margin-top:10px"></div>`;tr()}
-function tr(){const v=($('#tq')?.value||'').trim().toLowerCase();$('#tl').innerHTML=v?orders.filter(o=>o.id.toLowerCase()==v||o.mobile.replace(/\D/g,'').endsWith(v.replace(/\D/g,'')||'x')).map(o=>oCard(o)).join('')||'<p class="mu">—</p>':orders.map(o=>oCard(o)).join('')||'<p class="mu">—</p>'}
-function os(id,s){const o=orders.find(x=>x.id==id);if(s=='Cancelled'&&o.status!='Cancelled')o.items.forEach(x=>{const p=prods.find(p=>p.id==x.id);if(p)p.stock+=x.q});o.status=s;sv('fb_o',orders);sv('fb_p',prods);toast('✓');adminV()}
-function op(id){orders.find(x=>x.id==id).payStatus='Paid';sv('fb_o',orders);adminV()}
-function adminV(){if(!admin){$('#m').innerHTML=`<div class="panel"><h2>⚙️ Admin</h2><input id="ap" type="password" placeholder="Admin password"><p class="mu">Demo gate only (password: admin123). Browser-side checks are NOT real security; production needs server-side auth (Supabase Auth + RLS).</p><button class="btn" onclick="if($('#ap').value==='admin123'){admin=true;adminV()}else toast('Wrong password')">Login</button></div>`;return}
-const today=new Date().toISOString().slice(0,10),mon=today.slice(0,7),ok=orders.filter(o=>o.status!='Cancelled');const sum=f=>ok.filter(o=>o.at.startsWith(f)).reduce((s,o)=>s+o.tot,0);
-const cust={};orders.forEach(o=>{const c=cust[o.mobile]||(cust[o.mobile]={n:o.name,m:o.mobile,c:0,s:0});c.c++;c.s+=o.tot});const e=editing||{};
-$('#m').innerHTML=`<h2>📊 Dashboard</h2><div class="f"><div class="panel">Today<br><b>${tk(sum(today))}</b></div><div class="panel">Month<br><b>${tk(sum(mon))}</b></div><div class="panel">Orders<br><b>${n(orders.length)}</b></div></div>
-<h2>Products</h2><div class="panel"><div class="f"><input id="pb" placeholder="Bengali name" value="${esc(e.bn||'')}"><input id="pe" placeholder="English name" value="${esc(e.en||'')}"><input id="pr" type="number" placeholder="Price ৳" value="${e.price??''}"><input id="pd" type="number" placeholder="Discount %" value="${e.disc??''}"><input id="ps" type="number" placeholder="Stock" value="${e.stock??''}">
-<select id="pc">${CATS.map((c,i)=>`<option value="${i}" ${e.cat==i?'selected':''}>${c[0]}</option>`).join('')}</select><select id="pu">${['kg','gram','piece'].map(u=>`<option ${e.unit==u?'selected':''}>${u}</option>`).join('')}</select><input id="pi" placeholder="Photo (emoji or choose file below)" value="${e.em&&!e.em.startsWith('data:')?e.em:''}"><input id="pf" type="file" accept="image/*"><input id="pt" placeholder="Description" value="${esc(e.desc||'')}"></div><button class="btn" style="margin-top:8px" onclick="saveP()">${editing?'Update':'Add product'}</button></div>
-<div class="panel sc"><table><tr><th></th><th>Name</th><th>৳</th><th>Stock</th><th></th></tr>${prods.map(p=>`<tr><td>${p.em.startsWith('data:')?`<img src="${p.em}" width="28" height="28" alt="">`:p.em}</td><td>${esc(p.bn)}<br><span class="mu">${esc(p.en)}</span></td><td>${p.price}${p.disc?' −'+p.disc+'%':''}</td><td>${p.stock}</td><td><button class="btn o s" onclick="ep(${p.id})">Edit</button> <button class="btn d s" onclick="dp(${p.id})">Del</button></td></tr>`).join('')}</table></div>
-<h2>Orders</h2>${orders.map(o=>oCard(o,1)).join('')||'<p class="mu">—</p>'}
-<h2>Customers</h2><div class="panel sc"><table><tr><th>Name</th><th>Mobile</th><th>Orders</th><th>Spent</th></tr>${Object.values(cust).map(c=>`<tr><td>${esc(c.n)}</td><td>${esc(c.m)}</td><td>${c.c}</td><td>${tk(c.s)}</td></tr>`).join('')}</table></div>
-<h2>Delivery & coupons</h2><div class="panel"><div class="f"><label>Inside city ৳<input id="fi" type="number" value="${fees.in}"></label><label>Outside city ৳<input id="fo" type="number" value="${fees.out}"></label></div><button class="btn s" style="margin-top:6px" onclick="fees={in:+$('#fi').value||0,out:+$('#fo').value||0};sv('fb_f',fees);toast('✓')">Save charges</button>
-<hr><div class="mu">${Object.entries(coupons).map(([k,v])=>`${k} (${v}%) <a href="#" onclick="delete coupons[decodeURIComponent('${encodeURIComponent(k)}')];sv('fb_cp',coupons);adminV();return false">✕</a>`).join(' · ')}</div><div class="row" style="margin-top:6px"><input style="width:110px" id="kc" placeholder="CODE"><input id="kp" type="number" placeholder="%"><button class="btn s" onclick="const k=$('#kc').value.trim().toUpperCase(),v=+$('#kp').value;if(k&&v>0&&v<=100){coupons[k]=v;sv('fb_cp',coupons);adminV()}">Add coupon</button></div></div>
-<button class="btn o" onclick="admin=false;go('shop')">Logout</button>`}
-function saveP(){const g=i=>$('#'+i).value.trim();if(!g('pb')||!g('pe')||!(+g('pr')>0))return toast('Name and price required');
-const go2=img=>{const o={bn:g('pb'),en:g('pe'),price:+g('pr'),disc:Math.min(90,+g('pd')||0),stock:Math.max(0,+g('ps')||0),cat:+g('pc'),unit:g('pu'),desc:g('pt'),em:img||g('pi')||CATS[+g('pc')][2]};
-if(editing)Object.assign(editing,o);else prods.push({id:Math.max(0,...prods.map(p=>p.id))+1,...o});editing=null;sv('fb_p',prods);toast('✓');adminV()};
-const f=$('#pf').files[0];if(f){if(f.size>300000)return toast('Image too large (max 300KB)');const r=new FileReader();r.onload=()=>go2(r.result);r.readAsDataURL(f)}else go2(editing&&editing.em.startsWith('data:')&&!g('pi')?editing.em:'')}
-function ep(id){editing=prods.find(p=>p.id==id);adminV();window.scrollTo(0,0)}
-function dp(id){if(confirm('Delete?')){prods=prods.filter(p=>p.id!=id);delete cart[id];sv('fb_p',prods);sv('fb_c',cart);adminV()}}
-go('shop');
-</script></body></html>
+// IMPORTANT: Replace this placeholder with the deployed Google Apps Script Web App URL.
+const GOOGLE_SCRIPT_URL = "PASTE_YOUR_DEPLOYED_WEB_APP_URL_HERE";
+const WHATSAPP_NUMBER = "8801623565325";
+
+// Sample catalogue and sample prices: edit these to match actual shop stock/prices.
+const products = [
+{id:1,name:"আলু",unit:"প্রতি কেজি",price:35,cat:"সবজি",img:"https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=700&q=85"},
+{id:2,name:"টমেটো",unit:"প্রতি কেজি",price:60,cat:"সবজি",img:"https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=700&q=85"},
+{id:3,name:"শসা",unit:"প্রতি কেজি",price:45,cat:"সবজি",img:"https://images.unsplash.com/photo-1604977042946-1eecc30f269e?auto=format&fit=crop&w=700&q=85"},
+{id:4,name:"গাজর",unit:"প্রতি কেজি",price:70,cat:"সবজি",img:"https://images.unsplash.com/photo-1445282768818-728615cc910a?auto=format&fit=crop&w=700&q=85"},
+{id:5,name:"আপেল",unit:"প্রতি কেজি",price:220,cat:"ফল",img:"https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=700&q=85"},
+{id:6,name:"কলা",unit:"প্রতি ডজন",price:90,cat:"ফল",img:"https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=700&q=85"},
+{id:7,name:"কমলা",unit:"প্রতি কেজি",price:180,cat:"ফল",img:"https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=700&q=85"},
+{id:8,name:"লেবু",unit:"প্রতি হালি",price:30,cat:"ফল",img:"https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=700&q=85"},
+{id:9,name:"রুই মাছ",unit:"প্রতি কেজি",price:320,cat:"মাছ",img:"https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=700&q=85"},
+{id:10,name:"চিংড়ি",unit:"প্রতি কেজি",price:550,cat:"মাছ",img:"https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=700&q=85"},
+{id:11,name:"মুরগি",unit:"প্রতি কেজি",price:220,cat:"মাংস",img:"https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=700&q=85"},
+{id:12,name:"গরুর মাংস",unit:"প্রতি কেজি",price:750,cat:"মাংস",img:"https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85"}
+];
+// Correct a deliberately omitted/invalid optional image URL with a valid citrus image.
+products[7].img="https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=700&q=85";
+let activeCategory="সব";
+let cart={};
+const money=n=>"৳"+Number(n).toLocaleString("bn-BD");
+const cats=["সব","সবজি","ফল","মাছ","মাংস"];
+function renderCategories(){document.getElementById("categories").innerHTML=cats.map(c=>`<button class="cat ${activeCategory===c?'active':''}" onclick="setCategory('${c}')">${c==="সব"?"সব পণ্য":c}</button>`).join("")}
+function setCategory(c){activeCategory=c;renderCategories();renderProducts()}
+function renderProducts(){
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(activeCategory==="সব"||p.cat===activeCategory)&&p.name.toLowerCase().includes(q));
+ document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`<article class="product"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/700x500/eaf2e7/28543a?text=Fresh+Bazar'"><div class="product-info"><span class="tag">${p.cat} • তাজা</span><h3>${p.name}</h3><span class="unit">${p.unit}</span><div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ যোগ করুন</button></div></div></article>`).join(""):'<div class="empty">এই নামে কোনো পণ্য পাওয়া যায়নি।</div>';
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;updateCart();showToast("কার্টে পণ্য যোগ হয়েছে")}
+function changeQty(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];updateCart();renderCart()}
+function cartItems(){return Object.entries(cart).map(([id,qty])=>({product:products.find(p=>p.id===Number(id)),qty})).filter(x=>x.product)}
+function cartSum(){return cartItems().reduce((s,x)=>s+x.product.price*x.qty,0)}
+function updateCart(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("cartTotal").textContent=money(cartSum())}
+function renderCart(){
+ const items=cartItems();
+ document.getElementById("cartContents").innerHTML=items.length?'<div class="cart-lines">'+items.map(x=>`<div class="cartline"><div><b>${x.product.name}</b><small>${money(x.product.price)} × ${x.qty}</small></div><div class="qty"><button onclick="changeQty(${x.product.id},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${x.product.id},1)">+</button></div></div>`).join("")+'</div>':'<p style="color:#68766d;padding:18px 0">আপনার কার্ট এখনো খালি। বাজার থেকে পণ্য যোগ করুন।</p>';
+ updateCart();
+}
+function openCart(){renderCart();document.getElementById("cartOverlay").classList.add("show")}
+function closeCart(){document.getElementById("cartOverlay").classList.remove("show")}
+function showToast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200)}
+async function placeOrder(){
+ const items=cartItems();
+ const name=document.getElementById("customerName").value.trim();
+ const phone=document.getElementById("customerPhone").value.trim();
+ const address=document.getElementById("customerAddress").value.trim();
+ if(!items.length){showToast("আগে কার্টে পণ্য যোগ করুন");return}
+ if(!name||!phone||!address){showToast("নাম, ফোন ও ঠিকানা পূরণ করুন");return}
+ const orderId="FB-"+Date.now();
+ const productText=items.map(x=>`${x.product.name} × ${x.qty} (${x.product.unit})`).join(", ");
+ const qtyText=items.map(x=>`${x.product.name}:${x.qty}`).join("; ");
+ const total=cartSum();
+ const message=`নতুন অর্ডার - FRESH BAZAR%0Aঅর্ডার ID: ${orderId}%0Aনাম: ${encodeURIComponent(name)}%0Aফোন: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aপণ্য: ${encodeURIComponent(productText)}%0Aপরিমাণ: ${encodeURIComponent(qtyText)}%0Aমোট: ${encodeURIComponent(money(total))}%0Aপেমেন্ট: Cash on Delivery`;
+ // Send order to Apps Script if the owner has deployed it and added the URL.
+ let sheetNote="Google Sheets সংযোগ এখনো সেটআপ করা হয়নি।";
+ if(GOOGLE_SCRIPT_URL.startsWith("https://script.google.com/")){
+   try{
+     const body=new URLSearchParams({customerName:name,phone,address,products:productText,quantity:qtyText,total:String(total)});
+     await fetch(GOOGLE_SCRIPT_URL,{method:"POST",mode:"no-cors",body});
+     sheetNote="Google Sheets-এ অর্ডার পাঠানোর অনুরোধ করা হয়েছে; শিটে জমা হয়েছে কি না পরে যাচাই করুন।";
+   }catch(err){sheetNote="Google Sheets-এ পাঠানো যায়নি; WhatsApp-এ অর্ডার পাঠাতে থাকুন।"}
+ }
+ const waUrl=`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+ window.open(waUrl,"_blank");
+ showToast("WhatsApp খুলছে — অর্ডার পাঠাতে Send চাপুন");
+ alert(`আপনার অর্ডার প্রস্তুত। ${sheetNote}\nWhatsApp খুললে Send চাপুন। অর্ডার নিশ্চিত হবে দোকান থেকে উত্তর পাওয়ার পর।`);
+ cart={};updateCart();renderCart();closeCart();
+}
+document.getElementById("search").addEventListener("input",renderProducts);
+renderCategories();renderProducts();updateCart();
+</script>
+</body></html>
